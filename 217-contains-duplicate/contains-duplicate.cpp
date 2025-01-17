@@ -14,14 +14,26 @@ public:
         // return false;  // No duplicates
 
         // Sorting
-        sort(nums.begin(), nums.end());
+        // sort(nums.begin(), nums.end());
 
-        for (int i = 1; i < nums.size(); i++) {
-            if (nums[i] == nums[i - 1]) {
-                return true;
+        // for (int i = 1; i < nums.size(); i++) {
+        //     if (nums[i] == nums[i - 1]) {
+        //         return true;
+        //     }
+        // }
+
+        // return false;
+
+        // Unordered Set
+        unordered_set<int> hash;
+
+        for (int num : nums) {
+            if (hash.find(num) != hash.end()) {
+                return true; // Duplicate found
             }
+            hash.insert(num); // Insert the number
         }
 
-        return false;
+        return false; // No duplicates
     }
 };
