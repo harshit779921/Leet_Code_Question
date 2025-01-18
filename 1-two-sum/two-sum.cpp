@@ -17,12 +17,11 @@ public:
 
         unordered_map<int,int>mpp;
         for(int i =0; i<nums.size(); i++){
-            int a = nums[i];
-            int more = target - a;
+            int more = target - nums[i];
             if(mpp.find(more) != mpp.end()){
                 return {mpp[more],i};
             }
-            mpp[a] = i;
+            mpp[nums[i]] = i;
         }
         return {-1,-1};
 
