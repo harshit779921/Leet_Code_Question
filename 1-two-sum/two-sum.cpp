@@ -2,6 +2,7 @@ class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
         // Brute force Approach
+
         // int n = nums.size();
         // for(int i = 0;i<n;i++){
         //     for(int j = i+1; j<n;j++){
@@ -14,7 +15,7 @@ public:
 
         // Hashing Approach
 
-        map<int,int>mpp;
+        unordered_map<int,int>mpp;
         for(int i =0; i<nums.size(); i++){
             int a = nums[i];
             int more = target - a;
@@ -24,5 +25,12 @@ public:
             mpp[a] = i;
         }
         return {-1,-1};
+
+        // Optimal Approach 
+
+        // int i =0;
+        // int j = nums.size()-1;
+        // sort(nums.begin(),nums.end());
+
     }
 };
