@@ -24,12 +24,5 @@ public:
             mpp[nums[i]] = i;
         }
         return {-1,-1};
-
-        // Optimal Approach 
-
-        // int i =0;
-        // int j = nums.size()-1;
-        // sort(nums.begin(),nums.end());
-
     }
 };
