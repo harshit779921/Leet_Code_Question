@@ -1,13 +1,11 @@
 class Solution:
-    def maxProfit(self, prices):
-        left = 0  # Buy
-        right = 1  # Sell
+    def maxProfit(self, prices: List[int]) -> int:
+        minimum = prices[0]
         max_profit = 0
-        while right < len(prices):
-            current_profit = prices[right] - prices[left]
-            if prices[left] < prices[right]:
-                max_profit = max(current_profit, max_profit)
+        for i in prices[1:]:
+            if minimum > i:
+                minimum = i
             else:
-                left = right
-            right += 1
+                max_profit = max(max_profit, i - minimum)
+            
         return max_profit
