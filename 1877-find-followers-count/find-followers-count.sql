@@ -1,5 +1,5 @@
 # Write your MySQL query statement below
-SELECT  user_id , count(follower_id) as followers_count
-from Followers
-group by user_id 
-order by user_id asc;
+SELECT user_id, COUNT(user_id) AS followers_count
+FROM followers
+GROUP BY user_id
+ORDER BY user_id ASC;
