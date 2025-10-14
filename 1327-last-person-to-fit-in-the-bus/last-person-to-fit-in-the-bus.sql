@@ -1,6 +1,5 @@
 # Write your MySQL query statement below
-WITH CTE AS (
-SELECT 
+WITH CTE AS (SELECT 
 person_name,
 SUM(weight) OVER (ORDER BY turn) AS cumulative_weight
 FROM Queue
