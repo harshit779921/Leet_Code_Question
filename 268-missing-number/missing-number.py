@@ -4,14 +4,21 @@ class Solution:
         #     if i not in nums:
         #         return i
 
-        freq = {}
+        # freq = {}
 
-        for i in range(0,len(nums)+1):
-            freq[i] = 0
+        # for i in range(0,len(nums)+1):
+        #     freq[i] = 0
 
-        for num in nums:
-            freq[num] = 1
+        # for num in nums:
+        #     freq[num] = 1
         
-        for key, value in freq.items():
-            if value == 0:
-                return key
+        # for key, value in freq.items():
+        #     if value == 0:
+        #         return key
+
+        res = len(nums)
+
+        for i in range(len(nums)):
+            res += i - nums[i]
+        
+        return res
