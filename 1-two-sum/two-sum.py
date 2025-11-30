@@ -11,5 +11,5 @@ class Solution:
         for i in range(0, len(nums)):
             remaining = target - nums[i]  # Find the remaining
             if remaining in num_map:
-                return [num_map[remaining], i]  # Return indices of remaining and current number
-            num_map[nums[i]] = i  # Store the number with its index
+                return [num_map[remaining], i] 
+            num_map[nums[i]] = i  
